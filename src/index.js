@@ -8,7 +8,7 @@ module.exports = function longestConsecutiveLength(array) {
   let a = 1;
   let b = 0;
   
-  array = array.sort();
+  array = array.sort(function (a, b){ return a - b});
   for (let i = 1; i < array.length; i++) {
     if (array[i] - array[i - 1] == 1) {
       a++;
